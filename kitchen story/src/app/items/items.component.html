@@ -1,0 +1,29 @@
+<h3>List of Items Available</h3>
+<br />
+<button routerLink='/item-add' *ngIf="checkLoginStatus()" class="btn btn-outline-success">Add New item</button>
+<br /><br />
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of itemList">
+            <td>{{ item.id }}</td>
+            <td>{{ item.name }}</td>
+            <td>{{ item.price}}</td>
+            <td>
+
+                <li><a [routerLink]='["/item-detail/"+item.id]' class="btn btn-secondary">View Details</a>
+                    <a *ngIf=" !checkLoginStatus()" class="btn btn-success" (click)="addToCart(item)">Add to Cart</a>
+                </li>
+
+
+
+            </td>
+        </tr>
+    </tbody>
+</table>

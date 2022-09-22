@@ -1,0 +1,85 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "biryani",
+      "price": "100",
+      "location": "bangalore",
+      "delivery": "available",
+      "ratings": "5"
+    },
+    {
+      "id": 2,
+      "name": "kabab",
+      "price": "200",
+      "location": "bangalore",
+      "delivery": "available",
+      "ratings": "5"
+    },
+    {
+      "id": 3,
+      "name": "fish",
+      "price": "100",
+      "location": "bangalore",
+      "delivery": "available",
+      "ratings": "5"
+    },
+    {
+      "name": " EGG RICe",
+      "price": "40",
+      "ratings": "4",
+      "delivery": "availabe",
+      "location": "bangalore",
+      "id": 4
+    },
+    {
+      "name": "chicken rice",
+      "price": "150",
+      "ratings": "4",
+      "delivery": "not available",
+      "location": "mumbai",
+      "id": 5
+    },
+    {
+      "name": "egg fried rice",
+      "price": "60",
+      "ratings": "4",
+      "delivery": "available",
+      "location": "bangalore",
+      "id": 6
+    }
+  ],
+  "user": [
+    {
+      "name": "anil",
+      "password": "anil",
+      "id": 3
+    },
+    {
+      "name": "payani",
+      "password": "payani",
+      "id": 4
+    },
+    {
+      "id": 5,
+      "name": "kashyap",
+      "password": "balaji"
+    },
+    {
+      "id": 1,
+      "name": "achyuth",
+      "password": "gohan"
+    },
+    {
+      "id": 2,
+      "name": "naveen",
+      "password": "kumar"
+    },
+    {
+      "name": "sushma",
+      "password": "sushma",
+      "id": 6
+    }
+  ],
+  "cart": []
+}

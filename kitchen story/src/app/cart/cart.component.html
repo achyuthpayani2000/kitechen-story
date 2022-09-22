@@ -1,0 +1,19 @@
+<div class="cart-item">
+    <table class="table table-hover">
+        <thead>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Price</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of cartList">
+                <td>{{item.id}}</td>
+                <td>{{item.name}}</td>
+                <td>{{item.price}}</td>
+                <td><a class="btn btn-outline-success" (click)="remove(item.id)">Remove</a></td>
+            </tr>
+
+        </tbody>
+    </table>
+    <a class="btn btn-outline-success" routerLink="/pay">Pay</a>
+</div>

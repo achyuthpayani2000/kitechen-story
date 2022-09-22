@@ -1,0 +1,22 @@
+<form class="form-signin">
+    <h1 class="h3 mb-3 fw-normal">Please Register</h1>
+    <div class="mb-3 form-floating">
+        <input type="text" class="form-control" name="username" id="floatingInput" [(ngModel)]="user.name"
+            placeholder="Username" #name="ngModel" required />
+        <div *ngIf="name.errors?.required">
+            Name is required.
+        </div>
+        <label for="floatingInput">User Name</label>
+    </div>
+    <div class="mb-3 form-floating">
+        <input type="password" class="form-control" name="password" id="floatingPassword" #password="ngModel"
+            [(ngModel)]="user.password" placeholder="Password" required />
+        <div *ngIf="password.errors?.required">
+            Password is required.
+        </div>
+        <label for="floatingPassword">Password</label>
+    </div>
+    <div>
+        <button type="submit" class="btn  btn-primary" (click)="register()">Register</button>
+    </div>
+</form>

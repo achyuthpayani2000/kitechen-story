@@ -1,0 +1,46 @@
+<form class="form-signin">
+    <div class="mb-3 form-floating">
+        <input type="text" class="form-control" name="username" id="floatingInput" [(ngModel)]="item.name"
+            placeholder="Item name" #name="ngModel" required />
+        <div *ngIf="name.errors?.required">
+            Name is required.
+        </div>
+        <label for="floatingInput">Item Name</label>
+    </div>
+    <div class="mb-3 form-floating">
+        <input type="text" class="form-control" name="password" id="floatingPassword" #price="ngModel"
+            [(ngModel)]="item.price" placeholder="Price" required />
+        <div *ngIf="price.errors?.required">
+            Price is required.
+        </div>
+        <label for="floatingPassword">Price</label>
+    </div>
+
+    <input type="text" class="form-control" name="ratings" id="floatingInput" [(ngModel)]="item.ratings"
+        placeholder="Item rating" #rating="ngModel" required />
+    <div *ngIf="rating.errors?.required">
+        ratings is required.
+    </div>
+    <label for="floatingInput">Ratings</label>
+    <div class="mb-3 form-floating">
+        <input type="text" class="form-control" name="delivery" id="floatingPassword" #delivery="ngModel"
+            [(ngModel)]="item.delivery" placeholder="delivery" required />
+        <div *ngIf="delivery.errors?.required">
+            Delivery is required.
+        </div>
+        <label for="floatingPassword">Delivery</label>
+    </div>
+
+    <div class="mb-3 form-floating">
+        <input type="text" class="form-control" name="delivery" id="floatingPassword" #location="ngModel"
+            [(ngModel)]="item.location" placeholder="location" required />
+        <div *ngIf="location.errors?.required">
+            Location is required.
+        </div>
+        <label for="floatingPassword">Location</label>
+    </div>
+    <div>
+        <a class="btn btn-secondary" routerLink="/items">Go Back</a> |
+        <button type="submit" class="btn  btn-primary" (click)="UpdateItem()">Update</button>
+    </div>
+</form>

@@ -1,0 +1,44 @@
+<div class="card">
+    <div class="card-header">
+        Details of <b>{{ item.name }}</b>
+    </div>
+    <div class="card-body">
+        <table class="table">
+            <tbody>
+                <tr>
+                    <th>Item Id</th>
+                    <td>{{ item.id }}</td>
+                </tr>
+                <tr>
+                    <th>Item Name</th>
+                    <td>{{item.name }}</td>
+                </tr>
+
+                <tr>
+                    <th>Item delivery</th>
+                    <td>{{ item.delivery}}</td>
+                </tr>
+                <tr>
+                    <th>Item location</th>
+                    <td>{{ item.location }}</td>
+                </tr>
+                <tr>
+                    <th>Item rating</th>
+                    <td>{{item.ratings}}</td>
+                </tr>
+                <tr>
+                    <th>Item Price</th>
+                    <td>{{item.price}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="card-footer">
+        <a routerLink='/items' class="btn btn-secondary">Go Back</a>
+        <a (click)="addToCart(item)" class="btn btn-success" *ngIf="!checkLoginStatus()">Add To Cart</a>
+        <button (click)="deleteItem()" class="btn btn-danger" *ngIf="checkLoginStatus()">Delete</button>
+        <a [routerLink]="['/item-update/', item.id]" class="btn btn-primary" *ngIf="checkLoginStatus()">Update</a>
+
+
+    </div>
+</div>
